@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoBrand - Login</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+<header>
+    <h1>EcoBrand</h1>
+    <p>Natural Soap. Better Planet.</p >
+</header>
+
+<nav>
+    <a href=" ">Home</a >
+    <a href="products.html">Shop</a >
+    <a href="about.html">About Us</a >
+    <a href="cart.html">Shopping Cart</a >
+    <a href="login.html">Login</a >
+</nav>
+
+<main>
+    <h2>Account Login</h2>
+    <p>Select your role to enter the demo website.</p >
+
+    <form onsubmit="return loginUser()">
+        <label for="role">Account Type</label>
+        <select id="role">
+            <option value="customer">Customer</option>
+            <option value="employee">Employee</option>
+        </select>
+
+        <label for="username">Username</label>
+        <input type="text" id="username" required>
+
+        <label for="password">Password</label>
+        <input type="password" id="password" required>
+
+        <button type="submit">Login</button>
+    </form>
+
+    <p id="loginResult"></p >
+    <p>Demo only: no real account authentication.</p >
+</main>
+
+<footer>
+    <p>© 2026 EcoBrand</p >
+</footer>
+
+</body>
+</html>

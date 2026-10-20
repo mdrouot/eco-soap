@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoBrand - Shopping Cart</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+<header>
+    <h1>EcoBrand</h1>
+    <p>Natural Soap. Better Planet.</p >
+</header>
+
+<nav>
+    <a href=" ">Home</a >
+    <a href="products.html">Shop</a >
+    <a href="about.html">About Us</a >
+    <a href="cart.html">Shopping Cart</a >
+    <a href="login.html">Login</a >
+</nav>
+
+<main>
+    <h2>Shopping Cart Calculator</h2>
+    <p>Enter the quantity of each soap you want to buy.</p >
+
+    <form onsubmit="return calculateCart()">
+        <label for="coffeeQty">Coffee Soap - €7.90</label>
+        <input type="number" id="coffeeQty" min="0" value="0">
+
+        <label for="aloeQty">Aloe Vera Soap - €8.50</label>
+        <input type="number" id="aloeQty" min="0" value="0">
+
+        <label for="roseQty">Rose Soap - €9.90</label>
+        <input type="number" id="roseQty" min="0" value="0">
+
+        <label for="lavenderQty">Lavender Soap - €8.90</label>
+        <input type="number" id="lavenderQty" min="0" value="0">
+
+        <label for="oliveQty">Olive Oil Soap - €7.50</label>
+        <input type="number" id="oliveQty" min="0" value="0">
+
+        <label for="matchaQty">Matcha Soap - €9.50</label>
+        <input type="number" id="matchaQty" min="0" value="0">
+
+        <button type="submit">Calculate Total</button>
+        <button type="reset" onclick="resetCart()">Reset</button>
+    </form>
+
+    <h3 id="cartResult">Total: €0.00</h3>
+
+    <p>This is a demonstration cart. No payment is processed.</p >
+    <a href="products.html">Continue Shopping</a >
+</main>
+
+<footer>
+    <p>© 2026 EcoBrand</p >
+</footer>
+
+</body>
+</html>
