@@ -8,57 +8,33 @@
     <script src="script.js" defer></script>
 </head>
 <body>
-
-<header>
-    <h1>EcoBrand</h1>
-    <p>Natural Soap. Better Planet.</p >
-</header>
-
-<nav id="navigation">
-    <a href=" ">Home</a >
-    <a href="products.html">Shop</a >
-    <a href="about.html">About Us</a >
-    <a href="cart.html">Shopping Cart</a >
-    <a href="login.html">Login</a >
-    </ul>
-</nav>
-
-<main>
-    <h2>Shopping Cart Calculator</h2>
-    <p>Enter the quantity of each soap you want to buy.</p >
-
-    <form onsubmit="return calculateCart()">
-        <label for="coffeeQty">Coffee Soap - €7.90</label>
-        <input type="number" id="coffeeQty" min="0" value="0">
-
-        <label for="aloeQty">Aloe Vera Soap - €8.50</label>
-        <input type="number" id="aloeQty" min="0" value="0">
-
-        <label for="roseQty">Rose Soap - €9.90</label>
-        <input type="number" id="roseQty" min="0" value="0">
-
-        <label for="lavenderQty">Lavender Soap - €8.90</label>
-        <input type="number" id="lavenderQty" min="0" value="0">
-
-        <label for="oliveQty">Olive Oil Soap - €7.50</label>
-        <input type="number" id="oliveQty" min="0" value="0">
-
-        <label for="matchaQty">Matcha Soap - €9.50</label>
-        <input type="number" id="matchaQty" min="0" value="0">
-
-        <button type="submit">Calculate Total</button>
-        <button type="reset" onclick="resetCart()">Reset</button>
-    </form>
-
-    <h3 id="cartResult">Total: €0.00</h3>
-
-    <p>This is a demonstration cart. No payment is processed.</p >
-    <a href="products.html">Continue Shopping</a >
+<header><h1>EcoBrand</h1><p>Natural Soap. Better Planet.</p></header>
+<nav id="navigation"><ul>
+    <li><a href="index.html">Home</a></li><li><a href="products.html">Shop</a></li>
+    <li><a href="about.html">About Us</a></li><li><a href="cart.html">Shopping Cart</a></li><li><a href="login.html">Login</a></li>
+</ul></nav>
+<main class="cart-page">
+    <h2>Your Shopping Cart</h2>
+    <div id="cartItems" aria-live="polite"></div>
+    <section id="shippingSection" class="shipping-section">
+        <h3>Delivery address</h3>
+        <p>We use this address to determine delivery availability and future stock planning.</p>
+        <form id="shippingForm">
+            <div class="form-grid">
+                <label>First name<input name="firstName" autocomplete="given-name" required></label>
+                <label>Last name<input name="lastName" autocomplete="family-name" required></label>
+                <label class="full-width">Address line 1<input name="line1" autocomplete="address-line1" required></label>
+                <label class="full-width">Address line 2 (optional)<input name="line2" autocomplete="address-line2"></label>
+                <label>City<input name="city" autocomplete="address-level2" required></label>
+                <label>Postcode<input name="postalCode" autocomplete="postal-code" required></label>
+                <label class="full-width">Country<select name="country" autocomplete="country-name" required><option value="">Choose a country</option><option>France</option><option>Germany</option><option>Italy</option><option>Spain</option><option>United Kingdom</option><option>United States</option><option>Other</option></select></label>
+            </div>
+            <button type="submit">Save delivery address</button>
+            <p id="shippingResult" class="result" aria-live="polite"></p>
+        </form>
+    </section>
+    <p><a href="products.html">Continue shopping</a></p>
 </main>
-
-<footer>
-    <p>© 2026 EcoBrand</p >
-</footer>
-
+<footer><p>© 2026 EcoBrand</p></footer>
 </body>
 </html>
