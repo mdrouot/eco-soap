@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>EcoBrand - Login</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="myscripts.js" defer></script>
+</head>
+<body>
+
+<header>
+    <h1>EcoBrand</h1>
+    <p>Natural Soap. Better Planet.</p>
+</header>
+
+<nav id="navigation">
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Shop</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="cart.html">Shopping Cart</a></li>
+        <li><a href="login.html">Login</a></li>
+    </ul>
+</nav>
+
+<main>
+
+    <div class="intro">
+        <h2>Account Login</h2>
+        <p>Customer and Employee Demonstration</p>
+    </div>
+
+    <form onsubmit="return loginUser()">
+
+        <label for="role">Account Type</label>
+
+        <select id="role">
+            <option value="customer">Customer</option>
+            <option value="employee">Employee</option>
+        </select>
+
+        <label for="username">Username</label>
+        <input type="text" id="username" required>
+
+        <label for="password">Password</label>
+        <input type="password" id="password" required>
+
+        <button type="submit">Login</button>
+
+    </form>
+
+    <p class="result" id="loginResult"></p>
+
+    <p>
+        Demo only. Do not use a real password.
+        This page does not authenticate accounts.
+    </p>
+
+</main>
+
+<footer>
+    <p>EcoBrand - Student Website Project</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>EcoBrand - Employee Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="myscripts.js" defer></script>
+</head>
+<body>
+
+<header>
+    <h1>EcoBrand</h1>
+    <p>Employee Dashboard</p>
+</header>
+
+<nav id="navigation">
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Shop</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="cart.html">Shopping Cart</a></li>
+        <li><a href="login.html">Login</a></li>
+    </ul>
+</nav>
+
+<main>
+
+    <div class="intro">
+        <h2>Employee Dashboard</h2>
+        <p>Product and stock calculator demonstration.</p>
+    </div>
+    
+    <h2>Product Price List</h2>
+
+    <ul>
+        <li>Coffee Soap - €7.90</li>
+        <li>Aloe Vera Soap - €8.50</li>
+        <li>Rose Soap - €9.90</li>
+        <li>Lavender Soap - €8.90</li>
+        <li>Olive Oil Soap - €7.50</li>
+        <li>Matcha Soap - €9.50</li>
+    </ul>
+
+    <h2>Stock Value Calculator</h2>
+
+    <form onsubmit="return calculateStock()">
+
+        <label for="stockPrice">
+            Product Price (€)
+        </label>
+        <input type="number" id="stockPrice"
+               min="0.01" step="0.01" required>
+
+        <label for="stockQuantity">
+            Stock Quantity
+        </label>
+        <input type="number" id="stockQuantity"
+               min="0" step="1" required>
+
+        <button type="submit">
+            Calculate Stock Value
+        </button>
+
+    </form>
+
+    <p class="result" id="stockResult"></p>
+
+    <p>
+        This dashboard is for demonstration only.
+        No real inventory is stored.
+    </p>
+
+</main>
+
+<footer>
+    <p>EcoBrand - Student Website Project</p>
+</footer>
+
+</body>
+</html>
